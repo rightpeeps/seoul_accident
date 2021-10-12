@@ -1,0 +1,1 @@
+web: gunicorn --workers=1 'seoul_app:create_app()'

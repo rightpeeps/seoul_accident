@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>사고 위험율 계산기</title>   
+        <div style="text-align:center;">
+            <h1 style="color:navy; font-weight:bold; font-size:25px;">사고 위험율 계산기 - 서울</h1>
+            <p style="color:black; font-weight:normal; font-size:17px;">서울의 최고기온/최저기온 입력 후, '사고위험율 계산' 버튼 클릭 시, 예측을 시작합니다.</p>
+        <div>
+    </head>
+    <body class ='module'>
+        <div class="container">
+            <div>
+                <form action="{{ url_for('predict')}}" method="post">
+                <input class="inputbox" name="hightemp" required="required"  placeholder="최고기온 입력 (영상/영하)" type="number"  step=".01"> 
+            </div>
+            <div>
+                <form action="{{ url_for('predict')}}" method="post">
+                <input class="inputbox" name="lowtemp" required='required' placeholder="최저기온 입력 (영상/영하)" type="number"  step=".01" > 
+            </div>
+            <div>
+                <select class="inputbox" name="city_name" required="required" default='서울'>
+                    <option value="도시">서울</option>
+                </select>
+            </div>
+            <div>
+                <button class="inputbox" type="submit" >인명피해 예측하기</button>
+            </div>
+        </div>
+    </body>
+
+
+<style>
+.module {
+position: relative;
+top:90px;
+background:navajowhite;
+align-items: center;
+font-family: Arial;
+color:black;
+}
+
+.container{
+width: 60%;
+margin: 0 auto;
+}
+
+.inputbox{
+text-align: center;
+width: 100%;
+height: 70px;
+margin: 15px 0px 15px 0px;
+font-size: 17px;
+box-sizing: border-box;
+}
+</style>

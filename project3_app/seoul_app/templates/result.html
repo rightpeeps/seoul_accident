@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>사고 위험율 계산기</title>
+    </head>
+    <div style="text-align:center;">
+        <h1 style="color:navy; font-weight:bold; font-size:25px;">사고 위험율 계산기 - 서울</h1>
+        <p style="color:black; font-weight:normal; font-size:17px;">2017~ 2020년의 서울의 교통사고 데이터를 활용하여 예측합니다.</p>
+    <div>
+    <body style="position: relative; top:90px;background:navajowhite;align-items: center;font-family: Arial;color:black;">
+        <div style="width: 60%; margin: 0 auto;">
+            <div style = "display: flex; height: 70px; padding-top:35px; justify-content: center; font-weight:bold;">
+              {{ result }}
+            </div>
+            <form method="get" action="{{ url_for('index') }}">
+              <button style = "text-align: center; width:100%; height:70px; margin: 15px 0px 15px 0px; font-size:17px;" type="submit">다시 예측하기</button>
+          </form>
+        </div>
+    </body>
+</html>
